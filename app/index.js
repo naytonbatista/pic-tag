@@ -3,17 +3,13 @@ const path = require('path');
 const url = require('url');
 const { exec} = require('child_process');
 
-
-let mainWindow;
-
-
 exec(path.join(__dirname, 'start_server.bat'), (err, stdout, stderr)=> {
     if (err) {
         console.error(err);
         return;
       }
       console.log(stdout);
-})
+});
 
 function createWindow() {
 
@@ -24,7 +20,7 @@ function createWindow() {
     });
 
     let file = url.format({
-        pathname: path.join(__dirname, 'index.html'),
+        pathname: path.join(__dirname, 'view/index.html'),
         protocol: 'file',
                 
     });

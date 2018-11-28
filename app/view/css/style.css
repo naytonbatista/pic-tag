@@ -1,0 +1,36 @@
+.flex-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.item{
+    width: 25%;
+    height: 25%;
+}
+
+.texto{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.5em;
+}
+img {
+    width: 100%;
+    
+}
+
+.click-area{
+    cursor: pointer;
+}
+
+#save{
+    padding: 10px 5px;
+    width: 100%;
+    color: #fff;
+    background-color: #336666;
+    border:none;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
