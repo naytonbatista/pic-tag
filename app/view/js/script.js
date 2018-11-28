@@ -25,7 +25,7 @@ arquivo.onchange = (e) => {
 btnSave.onclick = (e) => {
 
     const formData = new FormData();
-    formData.append('fileUpload', arquivo.files.item(0));
+    formData.append('file', arquivo.files.item(0));
     
     const httpRequest = new XMLHttpRequest();
     httpRequest.onreadystatechange = function () {
@@ -35,7 +35,9 @@ btnSave.onclick = (e) => {
         }
     }
 
-    httpRequest.open('POST', 'http://localhost:3000/upload', true);
+    httpRequest.open('POST', 'http://localhost:3000/file/upload', true);
+   
+
     httpRequest.send(formData);
 
 }
