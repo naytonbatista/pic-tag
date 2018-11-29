@@ -24,13 +24,24 @@ img {
     cursor: pointer;
 }
 
-#save{
+#input-tag{
+    border-radius: 5px;
+    border:solid 1px #ccc;
+    width: 98.5%;
     padding: 10px 5px;
-    width: 100%;
+    
+}
+
+#save{
+    
     color: #fff;
     background-color: #336666;
     border:none;
     cursor: pointer;
     text-transform: uppercase;
     border-radius: 5px;
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px 5px;
+
 }

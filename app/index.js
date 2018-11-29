@@ -1,6 +1,8 @@
 const { BrowserWindow, app } = require('electron');
 const path = require('path');
 const url = require('url');
+
+
 const { exec } = require('child_process');
 
 exec(path.join(__dirname, 'start_server.bat'), (err, stdout, stderr) => {
@@ -29,6 +31,8 @@ function createWindow() {
     if (process.env.NODE_ENV == 'development') {
         mainWindow.webContents.openDevTools();
     }
+
+    mainWindow.setIcon(path.join(__dirname, 'napoli-logo.png'), 'N Systems');
 
     mainWindow.loadURL(file);
 }

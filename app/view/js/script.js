@@ -7,12 +7,22 @@ const previewImg = $('.preview-img');
 const arquivo = $('.arquivo');
 const clickArea = $('.click-area');
 const btnSave = $('#save');
+const texto = $('.texto');
 
 clickArea.onclick = (e) => {
     arquivo.click();
 }
 
 arquivo.onchange = (e) => {
+
+    if (e.target.files.length <= 0) {
+        texto.style.display = 'block';
+        previewImg.src = 'icons/image_default.png';
+        return;
+    }
+
+    texto.style.display = 'none';
+
     const arquivoUpload = e.target.files.item(0);
 
     const reader = new FileReader();
