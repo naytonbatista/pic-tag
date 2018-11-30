@@ -14,6 +14,7 @@
 
     <input type="file" style="display: none" name="file" class="arquivo" accept="image/*" />
     <div class="flex-container">
+
         <span class="click-area">
             <div class="item">
                 <img src="icons/image_default.png" class="preview-img">
@@ -27,7 +28,11 @@
             <input type="text" placeholder="Adicione uma tag" name="input-tag" id="input-tag">
         </div>
         <div class="item">
-            <input type="button" id="save" value="salvar">
+            <input type="button" class="btn" id="save" value="salvar">
+            <input type="button" class="btn" id="add-tag" value="adicionar tag">
+        </div>
+        <div class="item tags-container">
+            <label>Tags:</label><span class="tag"><label>Teste</label><a onclick="deleteTag(event)" href="#" class="close">x</a></span> 
         </div>
 
     </div>

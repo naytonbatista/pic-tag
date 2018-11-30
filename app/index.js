@@ -18,7 +18,8 @@ function createWindow() {
     let mainWindow = new BrowserWindow({
         width: 800,
         height: 600,
-        title: 'Pic Tag App'
+        title: 'Pic Tag App',
+        
     });
 
     let file = url.format({
@@ -33,7 +34,7 @@ function createWindow() {
     }
 
     mainWindow.setIcon(path.join(__dirname, 'napoli-logo.png'), 'N Systems');
-
+    //mainWindow.setMenu(null);
     mainWindow.loadURL(file);
 }
 
