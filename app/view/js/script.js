@@ -1,6 +1,3 @@
-
-
-
 const $ = document.querySelector.bind(document);
 
 const previewImg = $('.preview-img');
@@ -8,6 +5,8 @@ const arquivo = $('.arquivo');
 const clickArea = $('.click-area');
 const btnSave = $('#save');
 const texto = $('.texto');
+const inputTag = $('#input-tag');
+
 
 clickArea.onclick = (e) => {
     arquivo.click();
@@ -16,8 +15,7 @@ clickArea.onclick = (e) => {
 arquivo.onchange = (e) => {
 
     if (e.target.files.length <= 0) {
-        texto.style.display = 'block';
-        previewImg.src = 'icons/image_default.png';
+        _reset();
         return;
     }
 
@@ -42,6 +40,7 @@ btnSave.onclick = (e) => {
 
         if (httpRequest.status == 200 && httpRequest.readyState == 4) {
             alert('salvou!');
+            _reset();
         }
     }
 
@@ -49,5 +48,13 @@ btnSave.onclick = (e) => {
    
 
     httpRequest.send(formData);
+
+}
+
+function _reset(){
+    
+    texto.style.display = 'block';
+    previewImg.src = 'icons/image_default.png';
+    inputTag.value = "";
 
 }
