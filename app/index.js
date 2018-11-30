@@ -1,9 +1,11 @@
 const { BrowserWindow, app } = require('electron');
 const path = require('path');
 const url = require('url');
-
-
 const { exec } = require('child_process');
+
+if (process.env.NODE_ENV == 'development') {
+    require('electron-reload')(__dirname);
+}
 
 exec(path.join(__dirname, 'start_server.bat'), (err, stdout, stderr) => {
     if (err) {
@@ -19,8 +21,9 @@ function createWindow() {
         width: 800,
         height: 600,
         title: 'Pic Tag App',
-        
+
     });
+
 
     let file = url.format({
         pathname: path.join(__dirname, 'view/index.html'),
