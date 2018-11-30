@@ -1,1 +1,1 @@
-cd C:\Users\naytonbatista\Documents\pic-tag\backend && npm start
+cd .. && cd backend && npm start
