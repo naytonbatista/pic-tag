@@ -40,7 +40,7 @@ btnSave.onclick = (e) => {
     const httpRequest = new XMLHttpRequest();
     httpRequest.onreadystatechange = function () {
 
-        if (httpRequest.status == 200) {
+        if (httpRequest.status == 200 && httpRequest.readyState == 4) {
             alert('salvou!');
         }
     }
